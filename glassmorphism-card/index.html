@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karty 3D z Animowanym Tekstem</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Glassmorphism Card Hover Effects</title>
   </head>
   <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <h2>01</h2>
+          <h3>Karta Pierwsza</h3>
+          <p>
+            To jest przykładowy tekst dla pierwszej karty 3D. Ten tekst będzie
+            się poruszał i animował.
+          </p>
+          <a href="#" class="btn">Czytaj więcej</a>
+        </div>
+        <div
+          class="animated-text"
+          data-text="Technologia,Design,Innowacja,Rozwój,Kreatywność"
+        ></div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h2>02</h2>
+          <h3>Karta Druga</h3>
+          <p>
+            To jest przykładowy tekst dla drugiej karty 3D. Ten tekst będzie się
+            poruszał i animował.
+          </p>
+          <a href="#" class="btn">Odkryj więcej</a>
+        </div>
+        <div
+          class="animated-text"
+          data-text="Przyszłość,Inspiracja,Pomysł,Rozwój,Grafika"
+        ></div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h2>03</h2>
+          <h3>Karta Trzecia</h3>
+          <p>
+            To jest przykładowy tekst dla trzeciej karty 3D. Ten tekst będzie
+            się poruszał i animował.
+          </p>
+          <a href="#" class="btn">Więcej informacji</a>
+        </div>
+        <div
+          class="animated-text"
+          data-text="Sukces,Tworzenie,Jakość,Edukacja,Projekt"
+        ></div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
