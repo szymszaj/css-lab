@@ -1,24 +1,21 @@
 body {
   margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: #161623;
+  background: #161623;
 }
 
 .cursor {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: #fff;
   border-radius: 50%;
   pointer-events: none;
-  animation: moveCursor 2s infinite alternate;
+  transition: transform 0.1s ease;
 }
 
-@keyframes moveCursor {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(calc(100vw - 20px), calc(100vh - 20px));
-  }
+.cursor-shadow {
+  background: rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease;
 }
