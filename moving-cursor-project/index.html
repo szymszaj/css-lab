@@ -8,5 +8,32 @@
   </head>
   <body>
     <div class="cursor"></div>
+    <div class="cursor cursor-shadow"></div>
+    <div class="cursor cursor-shadow"></div>
+    <div class="cursor cursor-shadow"></div>
+    <script src="scripts/script.js"></script>
   </body>
+  <script>
+    const cursors = document.querySelectorAll(".cursor");
+    let mouseX = 0;
+    let mouseY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateCursors() {
+      let delay = 0;
+      cursors.forEach((cursor, index) => {
+        setTimeout(() => {
+          cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        }, delay);
+        delay += 50;
+      });
+      requestAnimationFrame(animateCursors);
+    }
+
+    animateCursors();
+  </script>
 </html>
