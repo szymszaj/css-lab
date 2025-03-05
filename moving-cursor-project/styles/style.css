@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #161623;
+}
+
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: moveCursor 2s infinite alternate;
+}
+
+@keyframes moveCursor {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(100vw - 20px), calc(100vh - 20px));
+  }
+}
