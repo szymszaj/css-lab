@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo CSS subgrid – Profesjonalny wygląd tabeli</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        <span class="icon-table"></span>
+        Demo: CSS <code>subgrid</code> – profesjonalna tabela
+      </h2>
+      <div class="table">
+        <div class="table-header">
+          <div>
+            <span>Nazwa</span>
+            <span class="sort-icon"></span>
+          </div>
+          <div>
+            <span>Kategoria</span>
+            <span class="sort-icon"></span>
+          </div>
+          <div>
+            <span>Opis</span>
+            <span class="sort-icon"></span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div>Rowery</div>
+          <div>Sport</div>
+          <div>Pojazdy jednośladowe</div>
+        </div>
+        <div class="table-row">
+          <div>Komputery</div>
+          <div>Elektronika</div>
+          <div>Sprzęt do pracy i rozrywki</div>
+        </div>
+        <div class="table-row">
+          <div>Książki</div>
+          <div>Edukacja</div>
+          <div>Źródło wiedzy i rozrywki</div>
+        </div>
+      </div>
+      <div class="info-box">
+        <strong>Wyjaśnienie:</strong> Nagłówki i rzędy dziedziczą układ kolumn
+        od rodzica <code>.table</code> dzięki <code>display: subgrid</code>.
+        Zmieniając ilość kolumn w rodzicu, dzieci automatycznie się
+        dostosowują.<br />
+        <span class="tip-icon"></span> Przydatne w panelach admina,
+        dashboardach, tabelach z wieloma poziomami nagłówków itp.
+      </div>
+    </div>
+  </body>
+</html>
