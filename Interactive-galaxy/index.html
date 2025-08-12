@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaktyka CSS</title>
+    <style>
+      body {
+        margin: 0;
+        background: radial-gradient(ellipse at center, #05010f 0%, #000 100%);
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .galaxy {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        transform-style: preserve-3d;
+        perspective: 800px;
+      }
+
+      .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translateY(-10px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="galaxy" id="galaxy"></div>
+
+    <script>
+      const galaxy = document.getElementById("galaxy");
+      const starsCount = 400;
+
+      for (let i = 0; i < starsCount; i++) {
+        const star = document.createElement("div");
+        const size = Math.random() * 2 + 1 + "px";
+        star.className = "star";
+        star.style.width = size;
+        star.style.height = size;
+
+        const x = (Math.random() - 0.5) * 2000;
+        const y = (Math.random() - 0.5) * 2000;
+        const z = Math.random() * 1000;
+
+        star.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+        star.style.animation = `float ${
+          Math.random() * 3 + 2
+        }s infinite ease-in-out`;
+        galaxy.appendChild(star);
+      }
+
+      let mouseX = 0,
+        mouseY = 0;
+      document.addEventListener("mousemove", (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 360;
+        mouseY = -(e.clientY / window.innerHeight - 0.5) * 360;
+        galaxy.style.transform = `rotateX(${mouseY}deg) rotateY(${mouseX}deg)`;
+      });
+    </script>
+  </body>
+</html>
