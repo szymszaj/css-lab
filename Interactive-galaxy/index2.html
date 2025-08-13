@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Galaktyka z efektem zakrzywienia przestrzeni</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+    >
+      <defs>
+        <filter id="space-warp" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.012"
+            numOctaves="2"
+            seed="7"
+            result="noise"
+          />
+          <feGaussianBlur in="noise" stdDeviation="6" result="noisy" />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noisy"
+            scale="28"
+            xChannelSelector="R"
+            yChannelSelector="G"
+            result="disp"
+          />
+          <feComponentTransfer in="disp" result="out">
+            <feFuncA type="table" tableValues="0 1" />
+          </feComponentTransfer>
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="scene" id="scene">
+      <div class="nebula"></div>
+      <div class="galaxy" id="galaxy"></div>
+      <div class="galaxy-lens" id="galaxyLens"></div>
+
+      <div class="ring"></div>
+      <div class="ring r2"></div>
+      <div class="black-hole"></div>
+
+      <div class="hint">
+        Porusz myszką aby obracać scenę • Efekt: zakrzywienie przestrzeni przy
+        środku
+      </div>
+    </div>
+
+    <script>
+      const base = document.getElementById("galaxy");
+      const lens = document.getElementById("galaxyLens");
+      const scene = document.getElementById("scene");
+
+      const STAR_COUNT = 620;
+      const W = window.innerWidth;
+      const H = window.innerHeight;
+
+      function createStar(i) {
+        const s = document.createElement("div");
+        s.className = "star";
+        const size = Math.random() * 2 + (Math.random() * 2 > 1 ? 1 : 0.6);
+        s.style.width = `${size}px`;
+        s.style.height = `${size}px`;
+        const x = (Math.random() - 0.5) * (W * 2);
+        const y = (Math.random() - 0.5) * (H * 2);
+        const z = Math.random() * 1200; // głębia
+        const rot = Math.random() * 360;
+        s.dataset.x = x;
+        s.dataset.y = y;
+        s.dataset.z = z;
+        s.dataset.rot = rot;
+        s.style.animation = `tw ${
+          Math.random() * 3 + 2
+        }s infinite ease-in-out ${Math.random() * 3}s`;
+        s.style.transform = `translate3d(${x}px, ${y}px, ${-z}px) rotate(${rot}deg)`;
+        return s;
+      }
+
+      for (let i = 0; i < STAR_COUNT; i++) {
+        const s1 = createStar(i);
+        const s2 = s1.cloneNode();
+        const z2 = parseFloat(s2.dataset.z) - (Math.random() * 180 - 90);
+        s2.dataset.z = z2;
+        s2.style.transform = `translate3d(${s2.dataset.x}px, ${
+          s2.dataset.y
+        }px, ${-z2}px) rotate(${s2.dataset.rot}deg)`;
+        base.appendChild(s1);
+        lens.appendChild(s2);
+      }
+
+      let isTouch = false;
+      document.addEventListener("pointermove", (e) => {
+        isTouch = e.pointerType === "touch";
+        const rx = (e.clientY / window.innerHeight - 0.5) * 14; // rotateX
+        const ry = (e.clientX / window.innerWidth - 0.5) * 20; // rotateY
+        scene.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      });
+
+      let t = 0;
+      function tick() {
+        t += 0.003;
+        const lensElem = document.documentElement.style;
+        const dynamicSize = 330 + Math.sin(t * 2.5) * 28;
+        document.documentElement.style.setProperty(
+          "--lens-size",
+          `${dynamicSize}px`
+        );
+        requestAnimationFrame(tick);
+      }
+      tick();
+
+      window.addEventListener("resize", () => {});
+    </script>
+  </body>
+</html>
