@@ -1,0 +1,182 @@
+:root {
+  --lens-size: 360px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(ellipse at center, #060116 0%, #000 70%);
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  perspective: 900px;
+  overflow: hidden;
+}
+
+.nebula {
+  position: absolute;
+  inset: 0;
+  width: 2000px;
+  height: 2000px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+      circle at 30% 40%,
+      rgba(120, 40, 255, 0.12) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(0, 160, 255, 0.08) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 80, 200, 0.04) 0%,
+      transparent 45%
+    );
+  filter: blur(30px) saturate(120%);
+  z-index: 1;
+  pointer-events: none;
+  animation: nebRotate 140s linear infinite;
+}
+@keyframes nebRotate {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.galaxy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.galaxy-lens {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  clip-path: circle(calc(var(--lens-size) / 2) at 50% 50%);
+  -webkit-clip-path: circle(calc(var(--lens-size) / 2) at 50% 50%);
+  display: block;
+  mix-blend-mode: screen;
+  filter: url(#space-warp);
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: linear-gradient(180deg, #fff 0%, rgba(200, 200, 255, 0.85) 100%);
+  border-radius: 50%;
+  opacity: 0.9;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+@keyframes tw {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.35;
+  }
+}
+
+.black-hole {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  z-index: 7;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    #070007 0%,
+    #000 45%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  box-shadow: 0 0 60px 18px rgba(130, 40, 255, 0.18),
+    0 0 24px 8px rgba(0, 200, 255, 0.06) inset;
+  pointer-events: none;
+}
+
+.black-hole::before {
+  content: "";
+  position: absolute;
+  inset: -42px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    rgba(180, 100, 255, 0.08),
+    rgba(100, 200, 255, 0.05),
+    rgba(180, 100, 255, 0.06)
+  );
+  filter: blur(30px) saturate(150%);
+  z-index: -1;
+}
+
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(200, 160, 255, 0.12);
+  width: 320px;
+  height: 320px;
+  z-index: 3;
+  mix-blend-mode: screen;
+  animation: ring1 36s linear infinite;
+  pointer-events: none;
+}
+.ring.r2 {
+  width: 520px;
+  height: 520px;
+  border-color: rgba(120, 200, 255, 0.08);
+  animation: ring2 46s linear infinite reverse;
+  z-index: 3;
+}
+@keyframes ring1 {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes ring2 {
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+.hint {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  color: #bdb7ff;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 8px 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  z-index: 20;
+}
