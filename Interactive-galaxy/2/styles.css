@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at center, #0a021a 0%, #000 100%);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galaxy {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.black-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #000 60%, transparent 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 60px 20px rgba(150, 0, 255, 0.3);
+  z-index: 10;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid rgba(180, 100, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 30s linear infinite;
+}
+
+.ring:nth-child(2) {
+  border-color: rgba(100, 200, 255, 0.5);
+  animation-duration: 50s;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.nebula {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2000px;
+  height: 2000px;
+  background: radial-gradient(
+    circle,
+    rgba(100, 0, 255, 0.05) 0%,
+    transparent 80%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: swirl 120s linear infinite;
+}
+
+@keyframes swirl {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

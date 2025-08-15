@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaktyka z Czarną Dziurą</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="galaxy" id="galaxy">
+      <div class="nebula"></div>
+      <div class="black-hole"></div>
+      <div class="ring" style="width: 300px; height: 300px"></div>
+      <div class="ring" style="width: 500px; height: 500px"></div>
+    </div>
+
+    <script>
+      const galaxy = document.getElementById("galaxy");
+      const starsCount = 400;
+
+      for (let i = 0; i < starsCount; i++) {
+        const star = document.createElement("div");
+        const size = Math.random() * 2 + 1 + "px";
+        star.className = "star";
+        star.style.width = size;
+        star.style.height = size;
+
+        const x = (Math.random() - 0.5) * 2000;
+        const y = (Math.random() - 0.5) * 2000;
+        const z = Math.random() * 1000;
+
+        star.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+        star.style.animation = `float ${
+          Math.random() * 3 + 2
+        }s infinite ease-in-out`;
+        galaxy.appendChild(star);
+      }
+
+      document.addEventListener("mousemove", (e) => {
+        const mouseX = (e.clientX / window.innerWidth - 0.5) * 360;
+        const mouseY = -(e.clientY / window.innerHeight - 0.5) * 360;
+        galaxy.style.transform = `rotateX(${mouseY}deg) rotateY(${mouseX}deg)`;
+      });
+    </script>
+  </body>
+</html>
