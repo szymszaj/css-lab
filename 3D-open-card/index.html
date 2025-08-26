@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>3D Karty</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card" data-id="1" tabindex="0" aria-label="Karta 1">
+        <div class="card-inner">
+          <div>
+            <div class="thumb">🌌</div>
+            <h3 class="title">Karta 1</h3>
+            <div class="subtitle">Krótki opis karty</div>
+          </div>
+          <div class="body">
+            To jest przykładowa karta z efektem 3D. Najedź myszką, aby
+            przechylić kartę. Kliknij, aby otworzyć.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-id="2" tabindex="0" aria-label="Karta 2">
+        <div class="card-inner">
+          <div>
+            <div class="thumb">🛰️</div>
+            <h3 class="title">Karta 2</h3>
+            <div class="subtitle">Inny opis</div>
+          </div>
+          <div class="body">
+            Ta karta ma ten sam efekt. Zamkniesz ją klikając w tło, przycisk lub
+            Esc.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-id="3" tabindex="0" aria-label="Karta 3">
+        <div class="card-inner">
+          <div>
+            <div class="thumb">⚛️</div>
+            <h3 class="title">Karta 3</h3>
+            <div class="subtitle">Jeszcze jeden</div>
+          </div>
+          <div class="body">Na dotyku też działa – kliknij, aby otworzyć.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
