@@ -2,40 +2,15 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Proca vs Kubeczki</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Gra: Proca vs Kubeczki</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Proca vs Kubeczki</h1>
-      <div class="panel">
-        <div class="badge" id="level">Poziom: 1</div>
-        <div class="badge" id="score">Trafienia: 0</div>
-        <div class="badge" id="shots">Strzały: 5</div>
-        <button class="btn secondary" id="reset">Restart poziomu ↻</button>
-      </div>
-    </header>
-
-    <div class="wrap">
-      <canvas
-        id="game"
-        width="1280"
-        height="720"
-        aria-label="Gra Proca vs Kubeczki"
-      ></canvas>
-      <div class="overlay" id="overlay" hidden>
-        <div class="card" id="message">
-          <h2>Poziom ukończony!</h2>
-          <p>Świetna robota 👏 Wszystkie kubeczki trafione.</p>
-          <button class="btn" id="next">Następny poziom ➜</button>
-        </div>
-      </div>
-    </div>
-
-    <p class="small">
-      Sterowanie: Przytrzymaj węzeł procy, przeciągnij aby naciągnąć, puść aby
-      strzelić. Na telefonie – dotknij i przeciągnij.
+    <h1>🎯 Proca vs Kubeczki</h1>
+    <canvas id="gameCanvas"></canvas>
+    <p>
+      Sterowanie: przytrzymaj myszkę (lub dotknij), przeciągnij i puść aby
+      wystrzelić.
     </p>
 
     <script src="game.js"></script>
