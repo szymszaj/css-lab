@@ -127,8 +127,7 @@ for (let i = 0; i < numberOfStars; i++) {
 }
 
 function animate() {
-  ctx.fillStyle = "rgba(10, 14, 39, 0.15)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   stars.forEach((star) => {
     star.update();
