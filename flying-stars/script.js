@@ -1,3 +1,5 @@
+import { config } from "./config.js";
+
 const canvas = document.getElementById("starsCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -7,7 +9,7 @@ canvas.height = window.innerHeight;
 let mouse = {
   x: null,
   y: null,
-  radius: 150,
+  radius: config.mouseRadius,
 };
 
 window.addEventListener("mousemove", (event) => {
@@ -15,30 +17,23 @@ window.addEventListener("mousemove", (event) => {
   mouse.y = event.y;
 });
 
-const colors = [
-  "#FFD700",
-  "#FF69B4",
-  "#00CED1",
-  "#FF1493",
-  "#9370DB",
-  "#00FF00",
-  "#FF4500",
-  "#4169E1",
-  "#FFD700",
-  "#FF00FF",
-  "#00FFFF",
-  "#FFFF00",
-];
-
 class Star {
   constructor() {
     this.x = Math.random() * canvas.width;
     this.y = canvas.height + Math.random() * 100;
-    this.size = Math.random() * 3 + 2;
-    this.speedY = Math.random() * 1.5 + 0.5;
-    this.speedX = Math.random() * 0.5 - 0.25;
-    this.color = colors[Math.floor(Math.random() * colors.length)];
-    this.opacity = Math.random() * 0.5 + 0.5;
+    this.size =
+      Math.random() * (config.size.max - config.size.min) + config.size.min;
+    this.speedY =
+      Math.random() * (config.speedY.max - config.speedY.min) +
+      config.speedY.min;
+    this.speedX =
+      Math.random() * (config.speedX.max - config.speedX.min) +
+      config.speedX.min;
+    this.color =
+      config.colors[Math.floor(Math.random() * config.colors.length)];
+    this.opacity =
+      Math.random() * (config.opacity.max - config.opacity.min) +
+      config.opacity.min;
     this.rotation = Math.random() * Math.PI * 2;
     this.rotationSpeed = (Math.random() - 0.5) * 0.05;
   }
@@ -75,7 +70,7 @@ class Star {
     ctx.fillStyle = gradient;
     ctx.fill();
 
-    ctx.shadowBlur = 15;
+    ctx.shadowBlur = config.shadowBlur;
     ctx.shadowColor = this.color;
     ctx.fill();
 
@@ -91,8 +86,8 @@ class Star {
       if (distance < mouse.radius) {
         const force = (mouse.radius - distance) / mouse.radius;
         const angle = Math.atan2(dy, dx);
-        this.x += Math.cos(angle) * force * 5;
-        this.y += Math.sin(angle) * force * 5;
+        this.x += Math.cos(angle) * force * config.repulsionForce;
+        this.y += Math.sin(angle) * force * config.repulsionForce;
       }
     }
 
@@ -106,7 +101,8 @@ class Star {
     if (this.y + this.size < 0) {
       this.y = canvas.height + Math.random() * 100;
       this.x = Math.random() * canvas.width;
-      this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.color =
+        config.colors[Math.floor(Math.random() * config.colors.length)];
     }
 
     if (this.x < 0 || this.x > canvas.width) {
@@ -118,9 +114,8 @@ class Star {
 }
 
 const stars = [];
-const numberOfStars = 100;
 
-for (let i = 0; i < numberOfStars; i++) {
+for (let i = 0; i < config.numberOfStars; i++) {
   const star = new Star();
   star.y = Math.random() * canvas.height;
   stars.push(star);
