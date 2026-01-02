@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Brand.</a>
+
+        <ul class="nav-links">
+          <li><a href="#" class="nav-item">Home</a></li>
+          <li><a href="#" class="nav-item">About</a></li>
+          <li class="nav-item-group">
+            <a href="#" class="nav-item"
+              >Services <i data-feather="chevron-down" class="dropdown-icon"></i
+            ></a>
+            <div class="mega-menu">
+              <div class="mega-column">
+                <h3><i data-feather="pen-tool"></i> Design</h3>
+                <ul>
+                  <li><a href="#">UI/UX Design</a></li>
+                  <li><a href="#">Web Design</a></li>
+                  <li><a href="#">Graphic Design</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3><i data-feather="code"></i> Development</h3>
+                <ul>
+                  <li><a href="#">Frontend Dev</a></li>
+                  <li><a href="#">Backend Dev</a></li>
+                  <li><a href="#">Mobile Apps</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3><i data-feather="trending-up"></i> Marketing</h3>
+                <ul>
+                  <li><a href="#">SEO Optimization</a></li>
+                  <li><a href="#">Social Media</a></li>
+                  <li><a href="#">Content Strategy</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" class="nav-item">Portfolio</a></li>
+          <li><a href="#" class="nav-item">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="icon-btn"
+            aria-label="Toggle Dark Mode"
+          >
+            <i data-feather="moon"></i>
+          </button>
+          <button
+            id="menu-toggle"
+            class="icon-btn mobile-only"
+            aria-label="Toggle Menu"
+          >
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Modern Elegance</h1>
+        <p>Experience the seamless transition between light and dark.</p>
+        <button class="cta-btn">Get Started</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
