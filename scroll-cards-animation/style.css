@@ -107,6 +107,7 @@ section.visible {
 .card-section {
   width: 100%;
   display: flex;
+  perspective: 1000px;
 }
 
 .left-align {
@@ -131,12 +132,13 @@ section.visible {
   max-height: 380px;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.1s ease-out, border-color 0.4s ease,
+    box-shadow 0.4s ease;
   cursor: pointer;
+  transform-style: preserve-3d;
 }
 
 .card:hover {
-  transform: scale(1.05) translateY(-10px);
   border-color: var(--card-hover-border);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 240, 255, 0.1);
 }
@@ -160,11 +162,12 @@ section.visible {
   align-items: center;
   justify-content: flex-end;
   opacity: 0.5;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover .card-visual {
   opacity: 1;
+  transform: translateZ(60px);
 }
 
 .visual-circle {
