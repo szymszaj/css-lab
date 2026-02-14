@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Card Scroll Animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scroll-container">
+      <section class="hero">
+        <h1>Scroll down to see the magic</h1>
+        <div class="scroll-indicator">
+          <span>↓</span>
+        </div>
+      </section>
+
+      <section class="card-section">
+        <div class="card-container">
+          <div class="card" id="animatedCard">
+            <div class="card-face card-front">
+              <div class="card-content">
+                <div class="card-icon">✨</div>
+                <h2>Premium Design</h2>
+                <p>
+                  Experience the future of web interactions with scroll-based 3D
+                  animations
+                </p>
+                <div class="card-stats">
+                  <div class="stat">
+                    <span class="stat-number">360°</span>
+                    <span class="stat-label">Rotation</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-number">3D</span>
+                    <span class="stat-label">Transform</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-number">Smooth</span>
+                    <span class="stat-label">Animation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-content">
+                <div class="card-icon">🚀</div>
+                <h2>Interactive Experience</h2>
+                <p>
+                  Scroll-driven animations create immersive user experiences
+                  that captivate and engage
+                </p>
+                <div class="features">
+                  <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <span>High Performance</span>
+                  </div>
+                  <div class="feature">
+                    <span class="feature-icon">🎨</span>
+                    <span>Beautiful Design</span>
+                  </div>
+                  <div class="feature">
+                    <span class="feature-icon">📱</span>
+                    <span>Responsive</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="scroll-info" id="scrollInfo">
+          <span class="info-label">Scroll Progress</span>
+          <span class="info-value" id="progressValue">0%</span>
+        </div>
+      </section>
+
+      <section class="end-section">
+        <h2>Beautiful, isn't it?</h2>
+        <p>Scroll back up to see the animation in reverse</p>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
