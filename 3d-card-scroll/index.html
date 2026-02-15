@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3D Card Scroll Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <canvas id="particleCanvas"></canvas>
     <div class="scroll-container">
       <section class="hero">
-        <h1>Scroll down to see the magic</h1>
+        <div class="hero-badge">Premium 3D Experience</div>
+        <h1>
+          Scroll to Experience<br /><span class="hero-accent">The Future</span>
+        </h1>
+        <p class="hero-subtitle">
+          Immersive scroll-driven animations that push the boundaries of web
+          design
+        </p>
         <div class="scroll-indicator">
           <span>↓</span>
         </div>
@@ -17,51 +31,57 @@
 
       <section class="card-section">
         <div class="card-container">
-          <div class="card" id="animatedCard">
-            <div class="card-face card-front">
-              <div class="card-content">
-                <div class="card-icon">✨</div>
-                <h2>Premium Design</h2>
-                <p>
-                  Experience the future of web interactions with scroll-based 3D
-                  animations
-                </p>
-                <div class="card-stats">
-                  <div class="stat">
-                    <span class="stat-number">360°</span>
-                    <span class="stat-label">Rotation</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat-number">3D</span>
-                    <span class="stat-label">Transform</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat-number">Smooth</span>
-                    <span class="stat-label">Animation</span>
+          <div class="card-border-wrapper">
+            <div class="card" id="animatedCard">
+              <div class="card-face card-front">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                  <div class="card-badge">Front Side</div>
+                  <div class="card-icon">✨</div>
+                  <h2>Premium Design</h2>
+                  <p>
+                    Experience the future of web interactions with scroll-based
+                    3D animations that captivate and inspire
+                  </p>
+                  <div class="card-stats">
+                    <div class="stat">
+                      <span class="stat-number">360°</span>
+                      <span class="stat-label">Rotation</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-number">3D</span>
+                      <span class="stat-label">Transform</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-number">Smooth</span>
+                      <span class="stat-label">Animation</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card-face card-back">
-              <div class="card-content">
-                <div class="card-icon">🚀</div>
-                <h2>Interactive Experience</h2>
-                <p>
-                  Scroll-driven animations create immersive user experiences
-                  that captivate and engage
-                </p>
-                <div class="features">
-                  <div class="feature">
-                    <span class="feature-icon">⚡</span>
-                    <span>High Performance</span>
-                  </div>
-                  <div class="feature">
-                    <span class="feature-icon">🎨</span>
-                    <span>Beautiful Design</span>
-                  </div>
-                  <div class="feature">
-                    <span class="feature-icon">📱</span>
-                    <span>Responsive</span>
+              <div class="card-face card-back">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                  <div class="card-badge">Back Side</div>
+                  <div class="card-icon">🚀</div>
+                  <h2>Interactive Experience</h2>
+                  <p>
+                    Scroll-driven animations create immersive user experiences
+                    that captivate and engage your audience
+                  </p>
+                  <div class="features">
+                    <div class="feature">
+                      <span class="feature-icon">⚡</span>
+                      <span>High Performance</span>
+                    </div>
+                    <div class="feature">
+                      <span class="feature-icon">🎨</span>
+                      <span>Beautiful Design</span>
+                    </div>
+                    <div class="feature">
+                      <span class="feature-icon">📱</span>
+                      <span>Fully Responsive</span>
+                    </div>
                   </div>
                 </div>
               </div>
