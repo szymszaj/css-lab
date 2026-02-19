@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Blur Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop"
+              alt="Slide 1"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1495518229035-c89cebe0fbf1?w=600&h=400&fit=crop"
+              alt="Slide 2"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=600&h=400&fit=crop"
+              alt="Slide 3"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
+              alt="Slide 4"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop"
+              alt="Slide 5"
+            />
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-btn prev" aria-label="Previous slide">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="nav-btn next" aria-label="Next slide">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="indicators">
+        <span class="indicator active" data-index="0"></span>
+        <span class="indicator" data-index="1"></span>
+        <span class="indicator" data-index="2"></span>
+        <span class="indicator" data-index="3"></span>
+        <span class="indicator" data-index="4"></span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
