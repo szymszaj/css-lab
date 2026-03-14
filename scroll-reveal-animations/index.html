@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Animations · CSS Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── NAV ── -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <div class="nav-logo">SCROLL<span>LAB</span></div>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#cards">Cards</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </div>
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="badge reveal-fade-up">✦ Nowoczesne animacje</div>
+        <h1 class="hero-title">
+          <span class="line reveal-fade-up" style="--d: 0.1s"
+            >Odkryj piękno</span
+          >
+          <span class="line gradient-text reveal-fade-up" style="--d: 0.25s"
+            >scroll animations</span
+          >
+          <span class="line reveal-fade-up" style="--d: 0.4s">w akcji</span>
+        </h1>
+        <p class="hero-sub reveal-fade-up" style="--d: 0.55s">
+          Przewiń w dół aby doświadczyć płynnych animacji,<br />
+          efektów paralaksy i nowoczesnych mikrointerakcji.
+        </p>
+        <div class="hero-cta reveal-fade-up" style="--d: 0.7s">
+          <a href="#features" class="btn btn-primary">Zacznij odkrywać</a>
+          <a href="#cards" class="btn btn-ghost">Zobacz przykłady</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ── FEATURES ── -->
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal-fade-up">Co oferujemy</p>
+          <h2 class="section-title reveal-fade-up" style="--d: 0.1s">
+            Animacje dla każdego elementu
+          </h2>
+          <p class="section-desc reveal-fade-up" style="--d: 0.2s">
+            Każdy efekt jest starannie zaprojektowany, aby zachwycić użytkownika
+            i poprawić UX.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal-slide-left" style="--d: 0s">
+            <div class="feature-icon">⚡</div>
+            <h3>Fade &amp; Slide</h3>
+            <p>
+              Klasyczne wejście elementów z płynnym przejściem opacity i
+              pozycji.
+            </p>
+          </div>
+          <div class="feature-card reveal-fade-up" style="--d: 0.15s">
+            <div class="feature-icon">🌀</div>
+            <h3>Rotate &amp; Scale</h3>
+            <p>Elementy wchodzą ze skalowaniem i delikatnym obrotem 3D.</p>
+          </div>
+          <div class="feature-card reveal-slide-right" style="--d: 0.3s">
+            <div class="feature-icon">✨</div>
+            <h3>Stagger Effect</h3>
+            <p>Sekwencyjne wejście wielu elementów z opóźnieniem każdego.</p>
+          </div>
+          <div class="feature-card reveal-slide-left" style="--d: 0.1s">
+            <div class="feature-icon">🎨</div>
+            <h3>Color Reveal</h3>
+            <p>Animowane gradienty i kolory pojawiające się przy scrollu.</p>
+          </div>
+          <div class="feature-card reveal-fade-up" style="--d: 0.25s">
+            <div class="feature-icon">📐</div>
+            <h3>Clip Path</h3>
+            <p>Efektowne masking animations za pomocą clip-path.</p>
+          </div>
+          <div class="feature-card reveal-slide-right" style="--d: 0.4s">
+            <div class="feature-icon">🔮</div>
+            <h3>Parallax</h3>
+            <p>Wielowarstwowy efekt głębi podczas przewijania strony.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HORIZONTAL TEXT MARQUEE ── -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>Scroll Animations</span>
+        <span>·</span>
+        <span>CSS Lab</span>
+        <span>·</span>
+        <span>Modern Web</span>
+        <span>·</span>
+        <span>Intersection Observer</span>
+        <span>·</span>
+        <span>Smooth UX</span>
+        <span>·</span>
+        <span>Scroll Animations</span>
+        <span>·</span>
+        <span>CSS Lab</span>
+        <span>·</span>
+        <span>Modern Web</span>
+        <span>·</span>
+        <span>Intersection Observer</span>
+        <span>·</span>
+        <span>Smooth UX</span>
+        <span>·</span>
+      </div>
+    </div>
+
+    <!-- ── STACKED CARDS ── -->
+    <section class="cards-section section" id="cards">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal-fade-up">Przykłady kart</p>
+          <h2 class="section-title reveal-fade-up" style="--d: 0.1s">
+            Karty ożywają przy scrollu
+          </h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card card--glass reveal-zoom" style="--d: 0s">
+            <div class="card-glow"></div>
+            <div class="card-tag">Design</div>
+            <h3>Minimalizm & Przestrzeń</h3>
+            <p>
+              Nowoczesny design oparty na przestrzeni negatywnej i czystej
+              typografii.
+            </p>
+            <div class="card-footer">
+              <div class="card-avatar-group">
+                <div class="avatar" style="--c: #a78bfa"></div>
+                <div class="avatar" style="--c: #38bdf8"></div>
+                <div class="avatar" style="--c: #34d399"></div>
+              </div>
+              <span class="card-arrow">→</span>
+            </div>
+          </article>
+
+          <article class="card card--neon reveal-zoom" style="--d: 0.15s">
+            <div class="card-glow"></div>
+            <div class="card-tag">Tech</div>
+            <h3>Neon & Dark Mode</h3>
+            <p>
+              Jaskrawe akcenty neonowe na głębokm tle — estetyka przyszłości.
+            </p>
+            <div class="card-footer">
+              <div class="card-avatar-group">
+                <div class="avatar" style="--c: #f472b6"></div>
+                <div class="avatar" style="--c: #fb923c"></div>
+              </div>
+              <span class="card-arrow">→</span>
+            </div>
+          </article>
+
+          <article class="card card--aurora reveal-zoom" style="--d: 0.3s">
+            <div class="card-glow"></div>
+            <div class="card-tag">Art</div>
+            <h3>Aurora & Gradients</h3>
+            <p>
+              Żywe gradienty inspirowane zorzą polarną tworzą magiczną
+              atmosferę.
+            </p>
+            <div class="card-footer">
+              <div class="card-avatar-group">
+                <div class="avatar" style="--c: #818cf8"></div>
+                <div class="avatar" style="--c: #22d3ee"></div>
+                <div class="avatar" style="--c: #a3e635"></div>
+              </div>
+              <span class="card-arrow">→</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS ── -->
+    <section class="stats-section section" id="stats">
+      <div class="stats-bg">
+        <div class="orb orb-4"></div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal-fade-up">
+            Liczby mówią same za siebie
+          </p>
+          <h2 class="section-title reveal-fade-up" style="--d: 0.1s">
+            Imponujące wyniki
+          </h2>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item reveal-fade-up" style="--d: 0s">
+            <div class="stat-number" data-target="98">0</div>
+            <div class="stat-unit">%</div>
+            <div class="stat-label">Satysfakcja klientów</div>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" style="--p: 98%"></div>
+            </div>
+          </div>
+          <div class="stat-item reveal-fade-up" style="--d: 0.1s">
+            <div class="stat-number" data-target="250">0</div>
+            <div class="stat-unit">+</div>
+            <div class="stat-label">Zrealizowanych projektów</div>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" style="--p: 83%"></div>
+            </div>
+          </div>
+          <div class="stat-item reveal-fade-up" style="--d: 0.2s">
+            <div class="stat-number" data-target="48">0</div>
+            <div class="stat-unit">h</div>
+            <div class="stat-label">Średni czas realizacji</div>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" style="--p: 60%"></div>
+            </div>
+          </div>
+          <div class="stat-item reveal-fade-up" style="--d: 0.3s">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-unit">k</div>
+            <div class="stat-label">Aktywnych użytkowników</div>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" style="--p: 75%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALLERY / BENTO ── -->
+    <section class="gallery-section section" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal-fade-up">Galeria</p>
+          <h2 class="section-title reveal-fade-up" style="--d: 0.1s">
+            Bento Grid Layout
+          </h2>
+        </div>
+        <div class="bento-grid">
+          <div class="bento-item bento-wide reveal-clip" style="--d: 0s">
+            <div class="bento-inner bento-gradient-1">
+              <h3>Typografia</h3>
+              <p>Nowoczesne kroje pisma, które mówią same za siebie.</p>
+            </div>
+          </div>
+          <div class="bento-item reveal-clip" style="--d: 0.1s">
+            <div class="bento-inner bento-gradient-2">
+              <span class="bento-icon">🎯</span>
+              <h3>Cel</h3>
+            </div>
+          </div>
+          <div class="bento-item reveal-clip" style="--d: 0.2s">
+            <div class="bento-inner bento-gradient-3">
+              <span class="bento-icon">🚀</span>
+              <h3>Prędkość</h3>
+            </div>
+          </div>
+          <div class="bento-item reveal-clip" style="--d: 0.15s">
+            <div class="bento-inner bento-gradient-4">
+              <span class="bento-icon">💡</span>
+              <h3>Innowacja</h3>
+            </div>
+          </div>
+          <div class="bento-item bento-tall reveal-clip" style="--d: 0.25s">
+            <div class="bento-inner bento-gradient-5">
+              <h3>Kreatywność</h3>
+              <p>Każdy pixel ma znaczenie.</p>
+            </div>
+          </div>
+          <div class="bento-item bento-wide reveal-clip" style="--d: 0.3s">
+            <div class="bento-inner bento-gradient-6">
+              <h3>Animacje w każdym detalu</h3>
+              <p>Od micro-interakcji po wielkie wejście na stronę.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section section" id="cta">
+      <div class="cta-bg">
+        <div class="orb orb-5"></div>
+        <div class="orb orb-6"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <p class="section-eyebrow reveal-fade-up">Gotowy na więcej?</p>
+          <h2 class="cta-title reveal-fade-up" style="--d: 0.1s">
+            Stwórzmy razem<br /><span class="gradient-text"
+              >coś wyjątkowego</span
+            >
+          </h2>
+          <p class="cta-desc reveal-fade-up" style="--d: 0.2s">
+            Dołącz do tysięcy deweloperów, którzy tworzą piękne, animowane
+            strony internetowe.
+          </p>
+          <div class="cta-buttons reveal-fade-up" style="--d: 0.3s">
+            <a href="#" class="btn btn-primary btn-lg">Zacznij projekt</a>
+            <a href="#" class="btn btn-outline btn-lg">Dowiedz się więcej</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="nav-logo">SCROLL<span>LAB</span></div>
+          <p>Nowoczesne animacje scroll dla CSS Lab.</p>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 CSS Lab · Scroll Animations</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
