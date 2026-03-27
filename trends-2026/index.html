@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Trends 2026</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="hero-badge">CSS · 2026</span>
+        <h1 class="hero-title">
+          <span class="gradient-text">Trends</span>
+          that ship
+        </h1>
+        <p class="hero-sub">
+          Scroll-driven animations · OKLCH · Bento Grid · View Transitions
+        </p>
+        <a class="hero-cta" href="#bento">Explore ↓</a>
+      </div>
+
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </section>
+
+    <div class="section-label reveal-label">
+      <span>scroll-driven animations</span>
+      <div class="label-line"></div>
+    </div>
+
+    <section class="bento" id="bento">
+      <article class="card card-wide card-oklch">
+        <div class="card-tag">OKLCH Colors</div>
+        <h2>Beyond sRGB</h2>
+        <p>
+          Żywsze, bardziej równomierne kolory w nowej przestrzeni barw.
+          Gradienty bez szarego środka.
+        </p>
+        <div class="color-swatches">
+          <span class="swatch s1"></span>
+          <span class="swatch s2"></span>
+          <span class="swatch s3"></span>
+          <span class="swatch s4"></span>
+          <span class="swatch s5"></span>
+          <span class="swatch s6"></span>
+        </div>
+      </article>
+
+      <article class="card card-scroll-demo">
+        <div class="card-tag">Scroll-driven</div>
+        <h2>Animowane<br />scrollem</h2>
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="small">Ten pasek rośnie razem z twoim scrollem — zero JS</p>
+      </article>
+
+      <article class="card card-glass">
+        <div class="card-tag">Glassmorphism</div>
+        <div class="glass-inner">
+          <div class="glass-icon">⬡</div>
+          <h2>Blur & Light</h2>
+          <p>
+            Wciąż silny trend w 2026 — ale bardziej subtelny i z OKLCH tłem.
+          </p>
+        </div>
+      </article>
+
+      <article class="card card-text-clip">
+        <div class="card-tag">Text Clip</div>
+        <p class="clip-text">BEAUTIFUL</p>
+        <p class="small">background-clip: text z animowanym gradientem</p>
+      </article>
+
+      <article class="card card-anchor">
+        <div class="card-tag">Anchor Positioning</div>
+        <h2>Smart Tooltips</h2>
+        <div class="anchor-demo">
+          <button class="anchor-btn" id="anchor-btn">Hover me</button>
+          <div class="tooltip" role="tooltip">CSS Anchor API 🎯</div>
+        </div>
+      </article>
+
+      <article class="card card-interpolate">
+        <div class="card-tag">interpolate-size</div>
+        <h2>height: auto</h2>
+        <p>Nareszcie animowana wysokość bez JS!</p>
+        <div class="accordion-demo">
+          <button class="acc-btn">Kliknij mnie ▾</button>
+          <div class="acc-body">
+            <p>
+              Ten element animuje się płynnie z height 0 do auto — natywnie w
+              CSS, bez żadnego JS!
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card-wide card-view-transition">
+        <div class="card-tag">View Transitions API</div>
+        <h2>Płynne przejścia stron</h2>
+        <p>Kliknij kartę aby zobaczyć View Transition w akcji</p>
+        <div class="vt-cards">
+          <div class="vt-card" data-id="1" onclick="transitTo(this)">
+            <span>🎨</span>
+            <strong>Design</strong>
+          </div>
+          <div class="vt-card" data-id="2" onclick="transitTo(this)">
+            <span>⚡</span>
+            <strong>Speed</strong>
+          </div>
+          <div class="vt-card" data-id="3" onclick="transitTo(this)">
+            <span>🔮</span>
+            <strong>Future</strong>
+          </div>
+        </div>
+        <div class="vt-detail" id="vt-detail" hidden>
+          <button onclick="closeDetail()" class="vt-back">← Back</button>
+          <div class="vt-detail-content" id="vt-detail-content"></div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span class="gradient-text">CSS Lab · 2026</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
