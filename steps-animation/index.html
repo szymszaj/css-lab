@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kroki rekrutacji</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="hero">
+      <div class="hero-text">
+        <span class="badge">Dołącz do nas</span>
+        <h1>
+          Twoja przyszłość<br /><span class="accent">zaczyna się tutaj</span>
+        </h1>
+        <p class="lead">
+          Rekrutacja u nas to nie stres — to rozmowa. Pokazujemy co robimy,
+          słuchamy czego szukasz i razem decydujemy, czy to ma sens.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>14 dni</strong>
+            <span>średni czas procesu</span>
+          </div>
+          <div class="stat">
+            <strong>3 etapy</strong>
+            <span>bez zbędnych rund</span>
+          </div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>feedback dla kandydata</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80"
+            alt="Spotkanie rekrutacyjne"
+          />
+          <div class="image-glow"></div>
+        </div>
+      </div>
+    </main>
+
+    <section class="steps-section">
+      <div class="steps-header">
+        <h2>Co cię czeka?</h2>
+        <p>Każdy krok to konkretna informacja zwrotna</p>
+      </div>
+
+      <div class="steps-track">
+        <div class="track-line">
+          <div class="track-fill" id="trackFill"></div>
+        </div>
+
+        <div class="steps-dots">
+          <div class="step-dot active" data-step="0">
+            <div class="dot-ring"></div>
+            <div class="dot-core"></div>
+            <div class="step-label">
+              <span class="step-num">01</span>
+              <span class="step-title">Rozmowa</span>
+              <span class="step-desc"
+                >Krótka rozmowa telefoniczna — poznajemy się i omawiamy
+                oczekiwania z obu stron.</span
+              >
+            </div>
+          </div>
+
+          <div class="step-dot" data-step="1">
+            <div class="dot-ring"></div>
+            <div class="dot-core"></div>
+            <div class="step-label">
+              <span class="step-num">02</span>
+              <span class="step-title">Zaproszenie na spotkanie</span>
+              <span class="step-desc"
+                >Jeśli rozmowa idzie dobrze, zapraszamy na spotkanie — online
+                lub w biurze.</span
+              >
+            </div>
+          </div>
+
+          <div class="step-dot" data-step="2">
+            <div class="dot-ring"></div>
+            <div class="dot-core"></div>
+            <div class="step-label">
+              <span class="step-num">03</span>
+              <span class="step-title">Spotkanie rekrutacyjne</span>
+              <span class="step-desc"
+                >Rozmowa z zespołem i liderem. Bez testów logicznych — za to
+                dużo konkretów o roli.</span
+              >
+            </div>
+          </div>
+
+          <div class="step-dot" data-step="3">
+            <div class="dot-ring"></div>
+            <div class="dot-core"></div>
+            <div class="step-label">
+              <span class="step-num">04</span>
+              <span class="step-title">Oferta</span>
+              <span class="step-desc"
+                >Przesyłamy ofertę wraz z pełnym zakresem obowiązków i pakietem
+                benefitów.</span
+              >
+            </div>
+          </div>
+
+          <div class="step-dot" data-step="4">
+            <div class="dot-ring"></div>
+            <div class="dot-core"></div>
+            <div class="step-label">
+              <span class="step-num">05</span>
+              <span class="step-title">Start!</span>
+              <span class="step-desc"
+                >Witamy na pokładzie. Twój onboarding zaczyna się pierwszego
+                dnia pracy.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
