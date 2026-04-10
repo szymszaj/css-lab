@@ -187,7 +187,6 @@ h1 {
   transform: translateY(-2px) scale(0.98);
 }
 
-/* ============ GLITCH BUTTON ============ */
 .btn-glitch {
   padding: 16px 50px;
   background: #0d0d0d;
@@ -285,7 +284,6 @@ h1 {
     0 0 25px rgba(0, 255, 249, 0.5);
 }
 
-/* ============ LIQUID BUTTON ============ */
 .btn-liquid {
   padding: 16px 50px;
   background: transparent;
@@ -339,7 +337,6 @@ h1 {
   border-color: transparent;
 }
 
-/* ============ AURORA BUTTON ============ */
 @property --aurora-angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -385,7 +382,6 @@ h1 {
   transform: translateY(-2px) scale(1.02);
 }
 
-/* ============ 3D FLIP BUTTON ============ */
 .btn-flip {
   padding: 0;
   background: transparent;
@@ -435,7 +431,6 @@ h1 {
   font-size: 20px;
 }
 
-/* ============ MAGNETIC BUTTON ============ */
 .btn-magnetic {
   padding: 18px 50px;
   background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
