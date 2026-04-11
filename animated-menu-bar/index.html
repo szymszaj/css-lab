@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Menu Bar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Nova</span>
+      </div>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#" class="nav-link active" data-label="Home">Home</a></li>
+        <li><a href="#" class="nav-link" data-label="Work">Work</a></li>
+        <li><a href="#" class="nav-link" data-label="About">About</a></li>
+        <li><a href="#" class="nav-link" data-label="Blog">Blog</a></li>
+        <li><a href="#" class="nav-link" data-label="Contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button class="btn-cta">Get Started</button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#" class="mob-link">Home</a></li>
+        <li><a href="#" class="mob-link">Work</a></li>
+        <li><a href="#" class="mob-link">About</a></li>
+        <li><a href="#" class="mob-link">Blog</a></li>
+        <li><a href="#" class="mob-link">Contact</a></li>
+      </ul>
+      <button class="btn-cta mobile-cta">Get Started</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="hero">
+      <p class="hero-tag">✦ Scroll to explore</p>
+      <h1>Modern<br /><span>Animated</span><br />Navbar</h1>
+      <p class="hero-sub">
+        Built with pure CSS &amp; vanilla JS.<br />Glassmorphism · Liquid
+        underline · Mobile drawer
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
