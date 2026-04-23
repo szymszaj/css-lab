@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Modals</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Modal Examples</h1>
+        <p>Otwórz modalne okna klikając poniżej</p>
+
+        <div class="button-group">
+          <button class="btn btn-primary" id="openModal1">
+            Glassmorphism Modal
+          </button>
+          <button class="btn btn-secondary" id="openModal2">Slide Modal</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal1" class="modal">
+      <div class="modal-overlay" id="overlay1"></div>
+      <div class="modal-content glassmorphism">
+        <div class="modal-header">
+          <h2>Glassmorphism Modal</h2>
+          <button class="close-btn" id="close1">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            To jest nowoczesny modal z efektem glassmorphism - przezroczysty,
+            efekt matowy z blur tłem.
+          </p>
+          <p>
+            Otwiera się gładko i estetycznie. Możesz przeczytać CSS aby zobaczyć
+            jak został zrobiony.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn cancel" id="cancel1">Anuluj</button>
+          <button class="modal-btn confirm">Zatwierdź</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-overlay" id="overlay2"></div>
+      <div class="modal-content slide">
+        <div class="modal-header">
+          <h2>Slide Modal</h2>
+          <button class="close-btn" id="close2">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            To jest modal z efektem slide-in. Pojawia się gładko z animacją
+            przesunięcia.
+          </p>
+          <p>
+            Wykorzystuje transformacje CSS3 do płynnej animacji wejścia i
+            wyjścia.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn cancel" id="cancel2">Anuluj</button>
+          <button class="modal-btn confirm">Zatwierdź</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
