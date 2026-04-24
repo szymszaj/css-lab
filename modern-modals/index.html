@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl">
+<html lang="pl" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="theme-toggle-container">
+      <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+        <svg
+          class="sun-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="moon-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="notificationContainer" class="notification-container"></div>
+
     <div class="container">
       <div class="card">
         <h1>Modal Examples</h1>
@@ -17,6 +52,12 @@
             Glassmorphism Modal
           </button>
           <button class="btn btn-secondary" id="openModal2">Slide Modal</button>
+          <button class="btn btn-tertiary" id="openModal3">
+            Advanced Modal
+          </button>
+          <button class="btn btn-quaternary" id="openNotification">
+            Notification
+          </button>
         </div>
       </div>
     </div>
@@ -65,6 +106,43 @@
         <div class="modal-footer">
           <button class="modal-btn cancel" id="cancel2">Anuluj</button>
           <button class="modal-btn confirm">Zatwierdź</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-overlay" id="overlay3"></div>
+      <div class="modal-content advanced draggable">
+        <div class="modal-header drag-handle">
+          <h2>Advanced Modal 🚀</h2>
+          <button class="close-btn" id="close3">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>Features:</h3>
+          <ul style="margin-left: 20px; color: #666">
+            <li>✨ Przeciągalny modal (kliknij i przeciągnij nagłówek)</li>
+            <li>🌙 Dark/Light theme - toggle w górnym prawym rogu</li>
+            <li>🔔 Notification system - demo poniżej</li>
+            <li>🎨 Zaawansowana animacja wejścia</li>
+            <li>💾 Pozycja modala pamiętana (localStorage)</li>
+          </ul>
+          <hr
+            style="
+              margin: 20px 0;
+              border: none;
+              border-top: 1px solid rgba(0, 0, 0, 0.1);
+            "
+          />
+          <p>
+            <strong>Pro tip:</strong> Spróbuj kliknąć "Send Notification" żeby
+            zobaczyć toast notifications! 🎉
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn cancel" id="cancel3">Zamknij</button>
+          <button class="modal-btn confirm" id="sendNotifBtn">
+            Send Notification
+          </button>
         </div>
       </div>
     </div>
