@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <h1 class="gallery__title">Odkryj świat</h1>
+      <p class="gallery__subtitle">
+        Galeria zapierających dech w piersiach widoków
+      </p>
+
+      <div class="slider">
+        <div class="slider__track">
+          <div
+            class="slide slide--active"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&quot;);
+            "
+          >
+            <div class="slide__content">
+              <span class="slide__tag">Natura</span>
+              <h2 class="slide__title">Górskie szczyty</h2>
+              <p class="slide__desc">
+                Majestatyczne pasma górskie skryte w mglistym poranku.
+              </p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80&quot;);
+            "
+          >
+            <div class="slide__content">
+              <span class="slide__tag">Plaża</span>
+              <h2 class="slide__title">Tropikalny raj</h2>
+              <p class="slide__desc">
+                Krystalicznie czysta woda i biały piasek pod palmami.
+              </p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=80&quot;);
+            "
+          >
+            <div class="slide__content">
+              <span class="slide__tag">Krajobraz</span>
+              <h2 class="slide__title">Złota godzina</h2>
+              <p class="slide__desc">
+                Magiczne światło zachodu słońca nad doliną.
+              </p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=1600&q=80&quot;);
+            "
+          >
+            <div class="slide__content">
+              <span class="slide__tag">Las</span>
+              <h2 class="slide__title">Tajemniczy bór</h2>
+              <p class="slide__desc">
+                Promienie słońca przebijające się przez gęstą koronę drzew.
+              </p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600&q=80&quot;);
+            "
+          >
+            <div class="slide__content">
+              <span class="slide__tag">Jezioro</span>
+              <h2 class="slide__title">Spokojna tafla</h2>
+              <p class="slide__desc">
+                Lustrzane odbicia gór w krystalicznym jeziorze.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--prev" aria-label="Poprzednie">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="slider__btn slider__btn--next" aria-label="Następne">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
+        <div class="slider__progress">
+          <div class="slider__progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="thumbnails">
+        <button
+          class="thumb thumb--active"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=60&quot;);
+          "
+        ></button>
+        <button
+          class="thumb"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=60&quot;);
+          "
+        ></button>
+        <button
+          class="thumb"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&q=60&quot;);
+          "
+        ></button>
+        <button
+          class="thumb"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=400&q=60&quot;);
+          "
+        ></button>
+        <button
+          class="thumb"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400&q=60&quot;);
+          "
+        ></button>
+      </div>
+
+      <div class="counter">
+        <span class="counter__current">01</span>
+        <span class="counter__divider"></span>
+        <span class="counter__total">05</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
