@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Slider — Coverflow</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="stage__bg"></div>
+
+      <div class="gallery">
+        <aside class="meta">
+          <div class="meta__index">
+            <span class="meta__current">01</span>
+            <span class="meta__total">/ 05</span>
+          </div>
+          <div class="meta__label">Kolekcja · 2026</div>
+        </aside>
+
+        <div class="coverflow">
+          <div class="coverflow__viewport">
+            <article
+              class="card is-active"
+              data-index="0"
+              style="
+                --img: url(&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&quot;);
+              "
+            >
+              <div class="card__image"></div>
+              <div class="card__shine"></div>
+            </article>
+            <article
+              class="card"
+              data-index="1"
+              style="
+                --img: url(&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80&quot;);
+              "
+            >
+              <div class="card__image"></div>
+              <div class="card__shine"></div>
+            </article>
+            <article
+              class="card"
+              data-index="2"
+              style="
+                --img: url(&quot;https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=80&quot;);
+              "
+            >
+              <div class="card__image"></div>
+              <div class="card__shine"></div>
+            </article>
+            <article
+              class="card"
+              data-index="3"
+              style="
+                --img: url(&quot;https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=1600&q=80&quot;);
+              "
+            >
+              <div class="card__image"></div>
+              <div class="card__shine"></div>
+            </article>
+            <article
+              class="card"
+              data-index="4"
+              style="
+                --img: url(&quot;https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600&q=80&quot;);
+              "
+            >
+              <div class="card__image"></div>
+              <div class="card__shine"></div>
+            </article>
+          </div>
+
+          <button class="nav nav--prev" aria-label="Poprzednie">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path
+                d="M15 18l-6-6 6-6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="nav nav--next" aria-label="Następne">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path
+                d="M9 18l6-6-6-6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="info">
+          <div class="info__track">
+            <div class="info__slide is-active">
+              <span class="info__tag">Natura</span>
+              <h2 class="info__title">Górskie szczyty</h2>
+              <p class="info__desc">
+                Majestatyczne pasma górskie skryte w mglistym poranku — cisza,
+                która huczy w uszach.
+              </p>
+            </div>
+            <div class="info__slide">
+              <span class="info__tag">Plaża</span>
+              <h2 class="info__title">Tropikalny raj</h2>
+              <p class="info__desc">
+                Krystalicznie czysta woda i biały piasek pod kołyszącymi się
+                palmami.
+              </p>
+            </div>
+            <div class="info__slide">
+              <span class="info__tag">Krajobraz</span>
+              <h2 class="info__title">Złota godzina</h2>
+              <p class="info__desc">
+                Magiczne światło zachodu słońca, gdy dolina płonie miedzią i
+                złotem.
+              </p>
+            </div>
+            <div class="info__slide">
+              <span class="info__tag">Las</span>
+              <h2 class="info__title">Tajemniczy bór</h2>
+              <p class="info__desc">
+                Promienie słońca przebijają się przez gęstą koronę drzew niczym
+                witraż.
+              </p>
+            </div>
+            <div class="info__slide">
+              <span class="info__tag">Jezioro</span>
+              <h2 class="info__title">Spokojna tafla</h2>
+              <p class="info__desc">
+                Lustrzane odbicia gór w krystalicznym jeziorze, bez jednej
+                zmarszczki.
+              </p>
+            </div>
+          </div>
+
+          <div class="dots">
+            <button class="dot is-active" aria-label="Slajd 1"></button>
+            <button class="dot" aria-label="Slajd 2"></button>
+            <button class="dot" aria-label="Slajd 3"></button>
+            <button class="dot" aria-label="Slajd 4"></button>
+            <button class="dot" aria-label="Slajd 5"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
