@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.btn {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e50914;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.btn-bars .label,
+.btn-bars::after {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.35s ease;
+}
+
+.btn-bars .label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-bars::after {
+  content: attr(data-text);
+  opacity: 0;
+  transform: translateY(100%);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.btn-bars:hover .label {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.btn-bars:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-bars .bars {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+  height: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-bars:hover .bars {
+  opacity: 1;
+}
+
+.btn-bars .bars i {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.btn-bars:hover .bars i {
+  animation: levitate 0.9s ease-in-out infinite;
+}
+
+.btn-bars:hover .bars i:nth-child(1) {
+  animation-delay: 0s;
+}
+.btn-bars:hover .bars i:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.btn-bars:hover .bars i:nth-child(3) {
+  animation-delay: 0.24s;
+}
+.btn-bars:hover .bars i:nth-child(4) {
+  animation-delay: 0.36s;
+}
+.btn-bars:hover .bars i:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+@keyframes levitate {
+  0%,
+  100% {
+    transform: translateY(0);
+    height: 4px;
+  }
+  50% {
+    transform: translateY(-6px);
+    height: 10px;
+  }
+}
