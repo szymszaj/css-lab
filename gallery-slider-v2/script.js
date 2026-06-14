@@ -3,8 +3,6 @@ const infoSlides = Array.from(document.querySelectorAll(".info__slide"));
 const dots = Array.from(document.querySelectorAll(".dot"));
 const btnPrev = document.querySelector(".nav--prev");
 const btnNext = document.querySelector(".nav--next");
-const counterCurrent = document.querySelector(".meta__current");
-const counterTotal = document.querySelector(".meta__total");
 const stageBg = document.querySelector(".stage__bg");
 const root = document.documentElement;
 
@@ -14,7 +12,6 @@ let current = 0;
 let autoplayId = null;
 
 root.style.setProperty("--autoplay", AUTOPLAY_MS + "ms");
-counterTotal.textContent = "/ " + String(total).padStart(2, "0");
 
 function getPos(i) {
   let offset = i - current;
@@ -38,13 +35,11 @@ function render() {
     const wasActive = d.classList.contains("is-active");
     d.classList.toggle("is-active", i === current);
     if (i === current && !wasActive) {
-      // restart fill animation
       d.style.animation = "none";
       void d.offsetWidth;
       d.style.animation = "";
     }
   });
-  counterCurrent.textContent = String(current + 1).padStart(2, "0");
 
   const activeImg = cards[current].style.getPropertyValue("--img");
   stageBg.style.setProperty("--bg-img", activeImg);

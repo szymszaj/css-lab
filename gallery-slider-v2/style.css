@@ -74,49 +74,6 @@ body {
   gap: 28px;
 }
 
-/* META */
-.meta {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  font-feature-settings: "tnum" on;
-}
-
-.meta__index {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-}
-
-.meta__current {
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  color: var(--ink);
-  display: inline-block;
-  min-width: 1.6ch;
-}
-
-.meta__total {
-  font-size: 1.1rem;
-  color: var(--ink-soft);
-  font-weight: 500;
-}
-
-.meta__label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  color: var(--ink-soft);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 8px 16px;
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-}
-
-/* COVERFLOW */
 .coverflow {
   position: relative;
   width: 100%;
